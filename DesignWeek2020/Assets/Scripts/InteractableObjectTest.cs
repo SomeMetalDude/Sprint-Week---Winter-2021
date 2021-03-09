@@ -4,19 +4,23 @@ using UnityEngine;
 
 public class InteractableObjectTest : MonoBehaviour
 {
-    [SerializeField] GameObject interactPrompt;
+    GameObject interactPrompt;
+    GameObject objectType;
 
     [SerializeField] TextMesh dialogue;
     [SerializeField] string dialogueText;
 
-    void Update()
-    {
-        // Display Interact prompt
+    [SerializeField] GameObject[] Turrets;
 
+    void Start()
+    {
+        interactPrompt = this.gameObject.transform.Find("Interact Prompt").gameObject;
+        objectType = this.gameObject.transform.Find("Type").gameObject;
     }
 
     void OnTriggerStay(Collider other)
     {
+        // checks if collision in trigger is tagged Player
         if (other.tag == "Player")
         {
             interactPrompt.SetActive(true);
@@ -25,9 +29,27 @@ public class InteractableObjectTest : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
+        // checks if collision exit in trigger is tagged Player
         if (other.tag == "Player")
         {
             interactPrompt.SetActive(false);
+        }
+    }
+
+    public void ExecuteInteraction()
+    {
+        // Checks for the tag of Type gameobject
+        if (objectType.tag == "DialogueBot")
+        {
+            Talk();
+        }
+        else if (objectType.tag == "Pickable Object")
+        {
+            Pickup();
+        }
+        else if (objectType.tag == "Turret Terminal")
+        {
+            DeactivateButton();
         }
     }
 
