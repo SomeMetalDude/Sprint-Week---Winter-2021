@@ -54,7 +54,7 @@ public class PlayerMotor : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerMovement();
-        LookCamera();
+        //LookCamera();
     }
 
     void Jump()
