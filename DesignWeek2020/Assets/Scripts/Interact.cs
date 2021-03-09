@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
+    
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         
     }
@@ -14,5 +16,18 @@ public class Interact : MonoBehaviour
     void Update()
     {
         
+    }
+
+
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "InteractTrigger")
+        {
+            if (Input.GetButtonDown("Use"))
+            {
+                Debug.Log("player used interact");
+                // Get reference and find script in children objects
+            }
+        }
     }
 }
