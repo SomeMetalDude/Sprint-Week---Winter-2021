@@ -31,7 +31,7 @@ public class Interact : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "InteractTrigger")
+        if (other.tag == "InteractTrigger" && collisionObject == null)
         {
             inTrigger = true;
             // get reference to object in collision
