@@ -1,18 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using System;
 
 public class HUDMenuController : Menu
 {
-    public MenuClassifier pauseMenuClassifier;
+    public Text gameClockText;
 
-
-    //  There is no pause button, it will be handled by player input
-    //  public void PauseButtonPressed() 
-    //  {
-    //      //MenuManager.Instance.HideMenu(menuClassifier); // Hide self
-    //      MenuManager.Instance.ShowMenu(pauseMenuClassifier); // Show pause menu
-
-    //      //DISABLE PLAYER INPUT HERE
-    //  }
+    private void Update()
+    {
+        int minutes = (int)GameManager.Instance.secondsLeft / 60;
+        int seconds = (int)GameManager.Instance.secondsLeft % 60;
+        TimeSpan ts = new TimeSpan(0, minutes, seconds);
+        gameClockText.text = ts.ToString(@"m\:ss");
+    }
 }
