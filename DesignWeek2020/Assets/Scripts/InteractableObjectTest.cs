@@ -76,8 +76,9 @@ public class InteractableObjectTest : MonoBehaviour
     {
         Debug.Log("Picked up");
 
-        // Disable gravity, move object to pickup position, and parent object to the player pickup transform
+        // Disable gravity, enable constraints, move object to pickup position, and parent object to the player pickup transform
         rb.useGravity = false;
+        rb.constraints = RigidbodyConstraints.FreezeAll;
         this.transform.position = playerPickup.transform.position;
         this.transform.parent = playerPickup.gameObject.transform;
         // gets reference to player Interact script and activates bool
@@ -86,7 +87,8 @@ public class InteractableObjectTest : MonoBehaviour
 
     public void DropObject()
     {
-        // enable gravity and unparent object
+        // disable constraints, enable gravity and unparent object
+        rb.constraints = RigidbodyConstraints.None;
         rb.useGravity = true;
         this.transform.parent = null;
     }

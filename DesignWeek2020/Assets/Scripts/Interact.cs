@@ -5,22 +5,46 @@ using UnityEngine;
 public class Interact : MonoBehaviour
 {
     public bool isPickingUp = false;
-    void OnTriggerStay(Collider other)
+    bool inTrigger = false;
+    [SerializeField] GameObject collisionObject;
+
+    void Update()
     {
-        if (other.tag == "InteractTrigger")
+        if (Input.GetKeyDown(KeyCode.E) && inTrigger && isPickingUp != true)
         {
-            if (Input.GetButtonDown("Use") && isPickingUp != true)
+            if (collisionObject != null)
             {
                 // Get reference to object and call the ExecuteInteraction method
-                other.GetComponent<InteractableObjectTest>().ExecuteInteraction();
+                collisionObject.GetComponent<InteractableObjectTest>().ExecuteInteraction();
             }
-            else if (Input.GetButtonDown("Use") && isPickingUp == true)
+        }
+        else if (Input.GetKeyDown(KeyCode.E) && isPickingUp == true)
+        {
+            if (collisionObject != null)
             {
                 // Get reference to object and call method to drop your pickup
-                other.GetComponent<InteractableObjectTest>().DropObject();
+                collisionObject.GetComponent<InteractableObjectTest>().DropObject();
                 // set bool to false again
                 isPickingUp = false;
             }
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "InteractTrigger")
+        {
+            inTrigger = true;
+            // get reference to object in collision
+            collisionObject = other.gameObject;
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == collisionObject.gameObject)
+        {
+            collisionObject = null;
+            inTrigger = false;
         }
     }
 }
