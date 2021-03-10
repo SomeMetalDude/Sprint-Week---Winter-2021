@@ -558,9 +558,9 @@ MonoBehaviour:
       m_Calls: []
   HUDMenuClassifier: {fileID: 11400000, guid: 5028c1062269d1b41894f58df3eeb41c, type: 2}
   gameSceneReference:
-    sceneAsset: {fileID: 102900000, guid: abea21e31c0cffb429524de6b2f036b4, type: 3}
-    scenePath: Assets/Scenes/GameScene1.unity
-    sceneName: GameScene1
+    sceneAsset: {fileID: 102900000, guid: 017f318dc87db0947b35d35809319275, type: 3}
+    scenePath: Assets/Scenes/Level design test level.unity
+    sceneName: Level design test level
 --- !u!1 &841626960
 GameObject:
   m_ObjectHideFlags: 0
