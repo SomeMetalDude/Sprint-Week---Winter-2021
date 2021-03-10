@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -35,7 +36,7 @@ public class MenuManager : Singleton<MenuManager>
 		Menu menu;
 		if (MenuList.TryGetValue(classifier.menuName, out menu))
 		{
-			Debug.Log($"Showing {classifier.menuName}");
+			//Debug.Log($"Showing {classifier.menuName}");
 			menu.OnShowMenu(options);
 			return;
 		}
@@ -46,7 +47,7 @@ public class MenuManager : Singleton<MenuManager>
 		Menu menu;
 		if (MenuList.TryGetValue(classifier.menuName, out menu))
 		{
-			Debug.Log($"Hiding {classifier.menuName}");
+			//Debug.Log($"Hiding {classifier.menuName}");
 			menu.OnHideMenu(options);
 			return;
 		}
