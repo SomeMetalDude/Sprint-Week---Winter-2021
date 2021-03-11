@@ -6,10 +6,18 @@
 public class PlayerInputs : MonoBehaviour
 {
     PlayerMotor playerMotor;
+    public InteractableObject interactableObject;
+    public Transform pickupPoint;
+    public GameObject itemHeld;
 
     private void Awake()
     {
         playerMotor = GetComponent<PlayerMotor>();
+    }
+
+    private void Update()
+    {
+        InteractionInput();
     }
 
     public Vector2 Movement()
@@ -23,6 +31,21 @@ public class PlayerInputs : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             playerMotor._jumpInput = true;
+        }
+    }
+
+    public void InteractionInput()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (interactableObject && interactableObject.isInteractable)
+            {
+                interactableObject.Interact();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameManager.Instance.SetGamePaused(!GameManager.Instance.isGamePaused());
         }
     }
 }

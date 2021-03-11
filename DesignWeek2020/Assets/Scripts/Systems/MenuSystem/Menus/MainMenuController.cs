@@ -17,5 +17,12 @@ public class MainMenuController : Menu
         //ENABLE PLAYER INPUT
 
         SceneLoader.Instance.LoadScene(gameSceneReference);
+
+        GameManager.Instance.SetGamePaused(false);
+    }
+
+    public void ExitApplication()
+    {
+        Application.Quit();
     }
 }

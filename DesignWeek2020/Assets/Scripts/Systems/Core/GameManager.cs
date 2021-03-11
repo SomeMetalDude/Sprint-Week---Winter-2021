@@ -44,11 +44,13 @@ public class GameManager : Singleton<GameManager>
         {
             MenuManager.Instance.ShowMenu(pauseMenuClassifier);
             gamePaused = true;
+            Time.timeScale = 0;
         }
         else
         {
             MenuManager.Instance.HideMenu(pauseMenuClassifier);
             gamePaused = false;
+            Time.timeScale = 1;
         }
     }
 

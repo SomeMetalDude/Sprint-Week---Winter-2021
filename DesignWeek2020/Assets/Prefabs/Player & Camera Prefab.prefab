@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1198765609
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1198765610}
+  m_Layer: 0
+  m_Name: Pickup Transform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1198765610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198765609}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 475797958086640856}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &475797956971308226
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,9 +363,10 @@ GameObject:
   - component: {fileID: 475797958086640863}
   - component: {fileID: 475797958086640862}
   - component: {fileID: 475797958086640861}
+  - component: {fileID: 2035063856}
   m_Layer: 0
   m_Name: PlayerSlot
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -355,6 +386,7 @@ Transform:
   - {fileID: 475797958542509517}
   - {fileID: 475797956971308227}
   - {fileID: 475797958714866696}
+  - {fileID: 1198765610}
   m_Father: {fileID: 475797958443736208}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -410,6 +442,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5eb8f00e3e88f0408bbf71d758be138, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2035063856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475797958086640835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e502c1293d729154a9f6bdcac21e07e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &475797958443736215
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +498,7 @@ GameObject:
   - component: {fileID: 475797958542509517}
   - component: {fileID: 475797958542509519}
   - component: {fileID: 475797958542509518}
+  - component: {fileID: 1448438020131043996}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -522,6 +567,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &1448438020131043996
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475797958542509516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &475797958705155336
 GameObject:
   m_ObjectHideFlags: 0
