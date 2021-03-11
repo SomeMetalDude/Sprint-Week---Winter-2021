@@ -11,7 +11,7 @@ public class Turret : MonoBehaviour
     private void Start()
     {
         Debug.Log($"{turretTerminal.name} - Terminal name");
-        turretTerminal.turretStateChangedEvent.AddListener(SetTurretEnabled);    
+        turretTerminal.toggleItemStateChangedEvent.AddListener(SetTurretEnabled);    
     }
 
     public void SetTurretEnabled(bool enabled)
