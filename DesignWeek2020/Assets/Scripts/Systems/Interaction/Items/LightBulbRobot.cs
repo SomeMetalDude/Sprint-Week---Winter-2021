@@ -14,16 +14,21 @@ public class LightBulbRobot : DialogueNPC
 
     public override void OnTriggerEntered(Collider other)
     {
-        Debug.Log("Trigger enter " + other.gameObject.name);
-        // If the NPC collided with the player while he is holding a light bulb
-        if (other.GetComponent<PlayerInputs>() && player.itemHeld)
+        // If player triggered 
+        if (other.GetComponent<PlayerInputs>())
         {
-            if (player.itemHeld.GetComponent<LightBulbItem>())
+            tooltipTextMesh.gameObject.SetActive(true); //Enable the dialogue
+
+            if (!conditionSatisfied)
             {
-                Debug.Log("Bulb located!");
-                tmObject.text = thankYouText;
-                Destroy(player.itemHeld);
-                tmObject.gameObject.SetActive(true);
+                // If the item is a lightbulb
+                if (player.itemHeld && player.itemHeld.GetComponent<LightBulbItem>())
+                {
+                    tooltipTextMesh.text = thankYouText;
+                    Destroy(player.itemHeld);
+                    conditionSatisfied = true;
+                    GetComponent<Animator>().SetBool("low", false);
+                }
             }
         }
     }

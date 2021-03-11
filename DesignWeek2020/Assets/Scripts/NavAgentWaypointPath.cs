@@ -10,6 +10,9 @@ public class NavAgentWaypointPath : MonoBehaviour
 	public List<Transform> waypoints;
     public int waypointIndex;
 
+	public float agentWalkSpeed = 2;
+	private Vector3 oldPos;
+
 	[SerializeField] float waitTime = 5f;
 	[SerializeField] float timePassed;
 
@@ -20,13 +23,29 @@ public class NavAgentWaypointPath : MonoBehaviour
 
 	void Start()
 	{
+		oldPos = transform.position;
 		//StartCoroutine(AiSchedule());
 	}
 
 	void Update()
 	{
+		agent.speed = GetComponent<Animator>().GetBool("low") ? 0 : agentWalkSpeed;
+		
+		// If the object moved to the left
+		if (oldPos.x > transform.position.x)
+        {
+			//Reset X axis
+			GetComponent<SpriteRenderer>().flipX = false;
+        }
+		else
+        {
+			//Invert X axis
+			GetComponent<SpriteRenderer>().flipX = true;
+		}
+
 		if (!agent.pathPending && agent.remainingDistance < 0.5f)
 		{
+			GetComponent<Animator>().SetBool("Idle", false);
 			timePassed += Time.deltaTime;
 			if (timePassed >= waitTime)
 			{
@@ -34,6 +53,7 @@ public class NavAgentWaypointPath : MonoBehaviour
 				GoToNextPoint();
 			}
 		}
+		oldPos = transform.position;
 	}
 
 	/*
@@ -51,6 +71,7 @@ public class NavAgentWaypointPath : MonoBehaviour
 		timePassed = 0;
 		agent.destination = waypoints[waypointIndex].transform.position;
 		waypointIndex = (waypointIndex + 1) % waypoints.Count;
+		GetComponent<Animator>().SetBool("Idle", true);
 	}
 
 }

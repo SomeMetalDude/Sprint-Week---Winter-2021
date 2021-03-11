@@ -538,7 +538,8 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Sure could use a lightbulb...
-  tmObject: {fileID: 700047577}
+  tooltipTextMesh: {fileID: 700047577}
+  conditionSatisfied: 0
   thankYouText: You brought me a bulb!
 --- !u!65 &130526814
 BoxCollider:
@@ -571,6 +572,7 @@ MonoBehaviour:
   - {fileID: 836655671}
   waypointIndex: 0
   waitTime: 5
+  timePassed: 0
 --- !u!195 &130526816
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -933,7 +935,7 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Terminal
-  tmObject: {fileID: 1790897220}
+  tooltipTextMesh: {fileID: 1790897220}
   isOn: 1
 --- !u!136 &291703766
 CapsuleCollider:
@@ -1479,7 +1481,7 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Lightbulb
-  tmObject: {fileID: 962817126}
+  tooltipTextMesh: {fileID: 962817126}
   isPickedUp: 0
 --- !u!1 &508752329
 GameObject:
@@ -2644,7 +2646,7 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Lightbulb2
-  tmObject: {fileID: 564326578}
+  tooltipTextMesh: {fileID: 564326578}
   isPickedUp: 0
 --- !u!65 &1096153903
 BoxCollider:

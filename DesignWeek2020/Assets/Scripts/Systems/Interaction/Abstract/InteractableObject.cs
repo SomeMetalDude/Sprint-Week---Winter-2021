@@ -9,12 +9,12 @@ public abstract class InteractableObject : MonoBehaviour
 
 
     public string tooltipText = "Interact with me!";
-    public TextMesh tmObject;
+    public TextMesh tooltipTextMesh;
 
     private void Start()
     {
-        tmObject.text = tooltipText;
-        tmObject.gameObject.SetActive(false);
+        tooltipTextMesh.text = tooltipText;
+        tooltipTextMesh.gameObject.SetActive(false);
         player = FindObjectOfType<PlayerInputs>();
     }
 
@@ -51,14 +51,14 @@ public abstract class InteractableObject : MonoBehaviour
     protected void EnableInteractions()
     {
         isInteractable = true;
-        tmObject.gameObject.SetActive(true);
+        tooltipTextMesh.gameObject.SetActive(true);
         OnInteractionEnabled();
     }
 
     protected void DisableInteractions()
     {
         isInteractable = false;
-        tmObject.gameObject.SetActive(false);
+        tooltipTextMesh.gameObject.SetActive(false);
         OnInteractionDisabled();
     }
 
