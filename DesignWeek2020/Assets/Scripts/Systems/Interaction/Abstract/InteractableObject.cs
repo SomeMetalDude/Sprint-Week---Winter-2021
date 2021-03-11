@@ -13,8 +13,11 @@ public abstract class InteractableObject : MonoBehaviour
 
     private void Start()
     {
-        tooltipTextMesh.text = tooltipText;
-        tooltipTextMesh.gameObject.SetActive(false);
+        if (tooltipTextMesh)
+        {
+            tooltipTextMesh.text = tooltipText;
+            tooltipTextMesh.gameObject.SetActive(false);
+        }
         player = FindObjectOfType<PlayerInputs>();
     }
 
@@ -51,14 +54,20 @@ public abstract class InteractableObject : MonoBehaviour
     protected void EnableInteractions()
     {
         isInteractable = true;
-        tooltipTextMesh.gameObject.SetActive(true);
+        if (tooltipTextMesh)
+        {
+            tooltipTextMesh.gameObject.SetActive(true);
+        }
         OnInteractionEnabled();
     }
 
     protected void DisableInteractions()
     {
         isInteractable = false;
-        tooltipTextMesh.gameObject.SetActive(false);
+        if (tooltipTextMesh)
+        {
+            tooltipTextMesh.gameObject.SetActive(false);
+        }
         OnInteractionDisabled();
     }
 
