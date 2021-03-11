@@ -4,16 +4,25 @@ using UnityEngine;
 
 public class SecurityBot : DialogueNPC
 {
-    public bool leg1 = false;
-    public bool leg2 = false;
-
+    public bool arm1 = false;
+    public bool arm2 = false;
     public bool head = false;
+
+    public GameObject headObj;
+    public GameObject leftArm;
+    public GameObject rightArm;
+
+    public GameObject individualParts;
+    public GameObject idleRobot;
+
+    public string thankYouText = "";
 
     public override void Interact()
     {
         if (conditionSatisfied)
         {
             // DO SOMETHING
+            Debug.Log("Interacted with full robot");
         }
     }
 
@@ -37,27 +46,39 @@ public class SecurityBot : DialogueNPC
                     {
                         Destroy(player.itemHeld);
                         head = true;
+
                         // Update sprite to have head
+                        headObj.SetActive(true);
                     }
                 }
                 // If the item is a security bot leg
-                if (player.itemHeld && player.itemHeld.GetComponent<SecurityBotLegItem>())
+                if (player.itemHeld && player.itemHeld.GetComponent<SecurityBotArmItem>())
                 {
-                    if (!leg1)
+                    if (!arm1)
                     {
                         Destroy(player.itemHeld);
-                        leg1 = true;
+                        arm1 = true;
+
                         // Update sprite to have one arm
+                        leftArm.SetActive(true);
                     }
-                    else if (!leg2)
+                    else if (!arm2)
                     {
                         Destroy(player.itemHeld);
-                        leg2 = true;
+                        arm2 = true;
+
                         // Update sprite to have two arms
+                        rightArm.SetActive(true);
                     }
                 }
             }
-            conditionSatisfied = head && leg1 && leg2;
+            conditionSatisfied = head && arm1 && arm2;
+            if (conditionSatisfied)
+            {
+                individualParts.SetActive(false);
+                idleRobot.SetActive(true);
+                tooltipTextMesh.text = thankYouText;
+            }
         }
     }
 }

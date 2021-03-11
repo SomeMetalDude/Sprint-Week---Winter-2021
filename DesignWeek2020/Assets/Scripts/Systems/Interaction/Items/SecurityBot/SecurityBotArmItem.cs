@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SecurityBotLegItem : PickupItem
+public class SecurityBotArmItem : PickupItem
 {
     
 }
