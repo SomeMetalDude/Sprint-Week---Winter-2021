@@ -538,7 +538,8 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Sure could use a lightbulb...
-  tmObject: {fileID: 700047577}
+  tooltipTextMesh: {fileID: 0}
+  conditionSatisfied: 0
   thankYouText: You brought me a bulb!
 --- !u!65 &130526814
 BoxCollider:
@@ -570,6 +571,7 @@ MonoBehaviour:
   - {fileID: 1133605874}
   - {fileID: 836655671}
   waypointIndex: 0
+  agentWalkSpeed: 2
   waitTime: 5
   timePassed: 0
 --- !u!195 &130526816
@@ -934,8 +936,11 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Terminal
-  tmObject: {fileID: 1790897220}
+  tooltipTextMesh: {fileID: 0}
   isOn: 1
+  toggleItemStateChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!136 &291703766
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1480,7 +1485,7 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Lightbulb
-  tmObject: {fileID: 962817126}
+  tooltipTextMesh: {fileID: 0}
   isPickedUp: 0
 --- !u!1 &508752329
 GameObject:
@@ -2645,7 +2650,7 @@ MonoBehaviour:
   isInteractable: 0
   player: {fileID: 0}
   tooltipText: Lightbulb2
-  tmObject: {fileID: 564326578}
+  tooltipTextMesh: {fileID: 0}
   isPickedUp: 0
 --- !u!65 &1096153903
 BoxCollider:
@@ -4527,3 +4532,72 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0721d210592e43cf895f9dc7ff47169, type: 3}
+--- !u!1001 &2967483101557078783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.487
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -24.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8015083724683968510, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8721282651548346836, guid: 4260e76f9171448d38eb62332f199b91,
+        type: 3}
+      propertyPath: m_Name
+      value: securityBotSprite
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4260e76f9171448d38eb62332f199b91, type: 3}
