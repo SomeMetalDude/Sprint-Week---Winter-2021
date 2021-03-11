@@ -635,6 +635,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Sure could use a lightbulb...
   tooltipTextMesh: {fileID: 700047577}
   conditionSatisfied: 0
@@ -783,6 +785,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Interact with me!
   tooltipTextMesh: {fileID: 0}
   isPickedUp: 0
@@ -1138,6 +1142,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Terminal
   tooltipTextMesh: {fileID: 1790897220}
   isOn: 1
@@ -1626,6 +1632,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Interact with me!
   tooltipTextMesh: {fileID: 0}
   isOn: 1
@@ -1802,6 +1810,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Lightbulb
   tooltipTextMesh: {fileID: 962817126}
   isPickedUp: 0
@@ -2009,6 +2019,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 600425871, guid: 4260e76f9171448d38eb62332f199b91, type: 3}
+      propertyPath: EToolTip
+      value: 
+      objectReference: {fileID: 1560470753}
     - target: {fileID: 600425871, guid: 4260e76f9171448d38eb62332f199b91, type: 3}
       propertyPath: tooltipText
       value: ...
@@ -2599,6 +2613,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Interact with me!
   tooltipTextMesh: {fileID: 0}
   isPickedUp: 0
@@ -3153,6 +3169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Lightbulb2
   tooltipTextMesh: {fileID: 564326578}
   isPickedUp: 0
@@ -3501,6 +3519,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7662db9407966b449b0ceb75c724ad0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &1155825932
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1388936720}
+    m_Modifications:
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.624
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6701453383611689324, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655005256459298795, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+        type: 3}
+      propertyPath: m_Name
+      value: E
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 46e1ea6721d454c5b93cd2d12dc726d0, type: 3}
 --- !u!1 &1167154683
 GameObject:
   m_ObjectHideFlags: 0
@@ -3894,6 +3981,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 0
+  EToolTip: {fileID: 0}
   tooltipText: Interact with me!
   tooltipTextMesh: {fileID: 0}
   isPickedUp: 0
@@ -4422,6 +4511,12 @@ Transform:
   m_Father: {fileID: 1602867366}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1560470753 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7655005256459298795, guid: 46e1ea6721d454c5b93cd2d12dc726d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1155825932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1602867365
 GameObject:
   m_ObjectHideFlags: 0
