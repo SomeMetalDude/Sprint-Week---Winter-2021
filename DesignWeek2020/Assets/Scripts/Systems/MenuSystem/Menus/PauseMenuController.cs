@@ -15,6 +15,7 @@ public class PauseMenuController : Menu
         MenuManager.Instance.HideMenu(menuClassifier); // Hide self
         MenuManager.Instance.ShowMenu(HUDMenuClassifier); // Show HUD
 
+        GameManager.Instance.SetGamePaused(false);
         //ENABLE PLAYER INPUT HERE
     }
 

@@ -22,6 +22,8 @@ public class LightBulbRobot : DialogueNPC
             {
                 Debug.Log("Bulb located!");
                 tmObject.text = thankYouText;
+                Destroy(player.itemHeld);
+                tmObject.gameObject.SetActive(true);
             }
         }
     }

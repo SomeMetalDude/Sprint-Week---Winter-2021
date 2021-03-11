@@ -43,5 +43,9 @@ public class PlayerInputs : MonoBehaviour
                 interactableObject.Interact();
             }
         }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameManager.Instance.SetGamePaused(!GameManager.Instance.isGamePaused());
+        }
     }
 }
