@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1766867089}
   - component: {fileID: 1766867090}
   - component: {fileID: 1766867091}
+  - component: {fileID: 8286945511228862264}
   m_Layer: 0
   m_Name: roomba
   m_TagString: Untagged
@@ -110,14 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c490d1a9c39df4198efc3f65abd9e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []
   waypointIndex: 0
   agentWalkSpeed: 2
-  waitTime: 5
+  waitTime: 0.5
   timePassed: 0
 --- !u!195 &1766867091
 NavMeshAgent:
@@ -127,7 +124,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307401704333333564}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
@@ -141,3 +138,22 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!95 &8286945511228862264
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307401704333333564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

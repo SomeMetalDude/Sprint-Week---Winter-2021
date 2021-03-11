@@ -7,6 +7,8 @@ public abstract class InteractableObject : MonoBehaviour
     public bool isInteractable = false;
     public PlayerInputs player;
 
+    public bool showEToolTip;
+    public GameObject EToolTip;
 
     public string tooltipText = "Interact with me!";
     public TextMesh tooltipTextMesh;
@@ -17,6 +19,10 @@ public abstract class InteractableObject : MonoBehaviour
         {
             tooltipTextMesh.text = tooltipText;
             tooltipTextMesh.gameObject.SetActive(false);
+        }
+        if (EToolTip)
+        {
+            EToolTip.SetActive(false);
         }
         player = FindObjectOfType<PlayerInputs>();
     }
@@ -58,6 +64,10 @@ public abstract class InteractableObject : MonoBehaviour
         {
             tooltipTextMesh.gameObject.SetActive(true);
         }
+        if (EToolTip && showEToolTip)
+        {
+            EToolTip.SetActive(true);
+        }
         OnInteractionEnabled();
     }
 
@@ -67,6 +77,10 @@ public abstract class InteractableObject : MonoBehaviour
         if (tooltipTextMesh)
         {
             tooltipTextMesh.gameObject.SetActive(false);
+        }
+        if (EToolTip && showEToolTip)
+        {
+            EToolTip.SetActive(false);
         }
         OnInteractionDisabled();
     }

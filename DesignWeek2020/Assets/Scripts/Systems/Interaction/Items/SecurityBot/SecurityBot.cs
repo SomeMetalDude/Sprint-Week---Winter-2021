@@ -77,6 +77,7 @@ public class SecurityBot : DialogueNPC
             {
                 individualParts.SetActive(false);
                 idleRobot.SetActive(true);
+                showEToolTip = true;
                 tooltipTextMesh.text = thankYouText;
             }
         }
