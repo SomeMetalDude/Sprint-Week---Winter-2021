@@ -7,7 +7,7 @@ public abstract class InteractableObject : MonoBehaviour
     public bool isInteractable = false;
     public PlayerInputs player;
 
-    public bool showEToolTip;
+    public bool showEToolTip = true;
     public GameObject EToolTip;
 
     public string tooltipText = "Interact with me!";
