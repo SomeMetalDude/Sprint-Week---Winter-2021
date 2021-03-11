@@ -14,7 +14,8 @@ public class NavAgentWaypointPath : MonoBehaviour
 	private Vector3 oldPos;
 
 	[SerializeField] float waitTime = 5f;
-	[SerializeField] float timePassed;
+	float timePassed;
+	[SerializeField] bool isBroken;
 
 	void Awake()
 	{
@@ -32,7 +33,7 @@ public class NavAgentWaypointPath : MonoBehaviour
 		agent.speed = GetComponent<Animator>().GetBool("low") ? 0 : agentWalkSpeed;
 		
 		// If the object moved to the left
-		if (oldPos.x > transform.position.x)
+		if (oldPos.x > transform.position.x && isBroken == false)
         {
 			//Reset X axis
 			GetComponent<SpriteRenderer>().flipX = false;
