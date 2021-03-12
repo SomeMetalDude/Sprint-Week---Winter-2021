@@ -12,7 +12,16 @@ public class LightBulbRobot : DialogueNPC
 
     public override void Interact()
     {
-        
+        if (conditionSatisfied)
+        {
+            HUDMenuController hud = MenuManager.Instance.GetMenu<HUDMenuController>(HUDMenuClassifier);
+            hud.RevealCatFact();
+            if (EToolTip)
+            {
+                EToolTip.SetActive(false);
+                showEToolTip = false;
+            }
+        }
     }
 
     public override void OnTriggerEntered(Collider other)
@@ -34,7 +43,8 @@ public class LightBulbRobot : DialogueNPC
                     Destroy(player.itemHeld);
                     conditionSatisfied = true;
                     GetComponent<Animator>().SetBool("low", false);
-
+                    isInteractable = true;
+                    player.interactableObject = this;
                     showEToolTip = true;
                     if (EToolTip)
                     {
