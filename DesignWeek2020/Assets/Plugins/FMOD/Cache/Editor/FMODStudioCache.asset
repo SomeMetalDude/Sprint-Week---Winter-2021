@@ -61,7 +61,7 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637510901230000000
+  lastModified: 637510913704758325
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -106,11 +106,11 @@ MonoBehaviour:
   - {fileID: -6427055198975889181}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 53
 --- !u!114 &-1049464917174112748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   - {fileID: -6427055198975889181}
   StringsBanks:
   - {fileID: 2173327877136554407}
-  stringsBankWriteTime: 637510901230000000
+  stringsBankWriteTime: 637510891735891138
   cacheVersion: 6
 --- !u!114 &2173327877136554407
 MonoBehaviour:
@@ -177,7 +177,9 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637510901230000000
+  lastModified: 637510891735891138
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 928
   Exists: 1

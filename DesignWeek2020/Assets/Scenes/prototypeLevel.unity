@@ -1659,6 +1659,8 @@ MonoBehaviour:
   fourthWall: {fileID: 423451353}
   roomWalls: []
   roomsToHide: []
+  normalMaterial: {fileID: 2100000, guid: 8303b269d8ff34c238f3de8364d6985e, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 3600947cf679d274ab60556133878adc, type: 2}
 --- !u!1 &484484515
 GameObject:
   m_ObjectHideFlags: 0
@@ -4242,6 +4244,8 @@ MonoBehaviour:
   fourthWall: {fileID: 1866377521}
   roomWalls: []
   roomsToHide: []
+  normalMaterial: {fileID: 0}
+  transparentMaterial: {fileID: 0}
 --- !u!65 &1379759386
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5358,6 +5362,8 @@ MonoBehaviour:
   fourthWall: {fileID: 1155414965}
   roomWalls: []
   roomsToHide: []
+  normalMaterial: {fileID: 2100000, guid: 8303b269d8ff34c238f3de8364d6985e, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 3600947cf679d274ab60556133878adc, type: 2}
 --- !u!65 &1994670538
 BoxCollider:
   m_ObjectHideFlags: 0
