@@ -593,7 +593,8 @@ PlayerSettings:
   managedStrippingLevel: {}
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
-  additionalIl2CppArgs: 
+  additionalIl2CppArgs: --additional-cpp="K:/Sheridan College/repos/SprintWeek/DesignWeek2020/Assets/../Temp/fmod_register_static_plugins.cpp"
+    --additional-cpp="K:/Sheridan College/repos/SprintWeek/DesignWeek2020/Assets/Plugins/FMOD/src/Runtime/fmod_static_plugin_support.h"
   scriptingRuntimeVersion: 1
   gcIncremental: 0
   assemblyVersionValidation: 1

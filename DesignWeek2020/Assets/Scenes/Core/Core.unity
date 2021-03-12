@@ -231,7 +231,7 @@ MonoBehaviour:
   onSceneLoadedEvent:
     m_PersistentCalls:
       m_Calls: []
-  delayTime: 1
+  delayTime: 0.2
   loadingMenuClassifier: {fileID: 11400000, guid: c8cb9c4c49111f848866eee9b3e9c941,
     type: 2}
 --- !u!4 &224647399
