@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{9a5bd177-b21e-4d81-b53d-f236a3577258}">
+		<property name="assetPath">
+			<value>RobotFootstep02.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.053832199546485264</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{28bec0cd-130d-44ce-adab-2a5db995d60b}</destination>
+		</relationship>
+	</object>
+</objects>
