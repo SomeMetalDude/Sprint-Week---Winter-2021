@@ -16,6 +16,12 @@ public abstract class ToggleItem : InteractableObject
     public override void Interact()
     {
         isOn = !isOn;
+        Animator anim;
+        if (TryGetComponent(out anim))
+        {
+            anim.SetBool("on", isOn);
+        }
+
         toggleItemStateChangedEvent.Invoke(isOn);
     }
 }

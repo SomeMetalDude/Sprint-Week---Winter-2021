@@ -8,7 +8,10 @@ public class LaserGate : MonoBehaviour
 
     private void Start()
     {
-        laserTerminal.toggleItemStateChangedEvent.AddListener(SetLaserEnabled);
+        if (laserTerminal)
+        {
+            laserTerminal.toggleItemStateChangedEvent.AddListener(SetLaserEnabled);
+        }
     }
 
     public void SetLaserEnabled(bool enabled)
