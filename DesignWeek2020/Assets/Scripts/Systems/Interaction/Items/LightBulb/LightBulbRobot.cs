@@ -34,6 +34,12 @@ public class LightBulbRobot : DialogueNPC
                     conditionSatisfied = true;
                     GetComponent<Animator>().SetBool("low", false);
 
+                    showEToolTip = true;
+                    if (EToolTip)
+                    {
+                        EToolTip.SetActive(true);
+                    }
+
                     // If a terminal is referenced
                     if (terminal)
                     {
