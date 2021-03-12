@@ -10,7 +10,13 @@ public class RoombaBot : DialogueNPC
     {
         if (conditionSatisfied)
         {
-
+            HUDMenuController hud = MenuManager.Instance.GetMenu<HUDMenuController>(HUDMenuClassifier);
+            hud.RevealCatFact();
+            if (EToolTip)
+            {
+                EToolTip.SetActive(false);
+                showEToolTip = false;
+            }
         }
     }
 
@@ -45,6 +51,8 @@ public class RoombaBot : DialogueNPC
                     }
                     Destroy(player.itemHeld);
                     conditionSatisfied = true;
+                    isInteractable = true;
+                    player.interactableObject = this;
                     GetComponent<SpriteRenderer>().sprite = completedRoombaSprite;
                     GetComponent<NavAgentWaypointPath>().enabled = true;
                     GetComponent<NavAgentWaypointPath>().isBroken = false;

@@ -21,8 +21,13 @@ public class SecurityBot : DialogueNPC
     {
         if (conditionSatisfied)
         {
-            // DO SOMETHING
-            Debug.Log("Interacted with full robot");
+            HUDMenuController hud = MenuManager.Instance.GetMenu<HUDMenuController>(HUDMenuClassifier);
+            hud.RevealCatFact();
+            if (EToolTip)
+            {
+                EToolTip.SetActive(false);
+                showEToolTip = false;
+            }
         }
     }
 
@@ -81,6 +86,8 @@ public class SecurityBot : DialogueNPC
                     {
                         EToolTip.SetActive(true);
                     }
+                    isInteractable = true;
+                    player.interactableObject = this;
                     tooltipTextMesh.text = thankYouText;
                 }
             }

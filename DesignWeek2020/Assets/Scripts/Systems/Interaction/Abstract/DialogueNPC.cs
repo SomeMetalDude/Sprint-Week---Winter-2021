@@ -6,4 +6,6 @@ public abstract class DialogueNPC : InteractableObject
 {
     public bool conditionSatisfied;
 
+    public MenuClassifier HUDMenuClassifier;
+
 }
