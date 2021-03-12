@@ -164,7 +164,7 @@ MonoBehaviour:
   - {fileID: 6685566589305748091}
   StringsBanks:
   - {fileID: 2815243915030860511}
-  stringsBankWriteTime: 637511048244783010
+  stringsBankWriteTime: 637511066006610016
   cacheVersion: 6
 --- !u!114 &1095353325029791693
 MonoBehaviour:
@@ -204,7 +204,7 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637511048244783010
+  lastModified: 637511066006610016
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -270,7 +270,7 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637511048244723177
+  lastModified: 637511066006510275
   LoadResult: 0
   FileSizes: []
   Exists: 1
