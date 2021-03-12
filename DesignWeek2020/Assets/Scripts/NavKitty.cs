@@ -8,8 +8,6 @@ public class NavKitty : MonoBehaviour
     Transform player;
     NavMeshAgent agent;
 
-    [SerializeField] GameObject name;
-
     void OnEnable()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -24,21 +22,5 @@ public class NavKitty : MonoBehaviour
     void Update()
     {
         agent.destination = player.position;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject == player.gameObject)
-        {
-            name.gameObject.SetActive(true);
-        }
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject == player.gameObject)
-        {
-            name.gameObject.SetActive(false);
-        }
     }
 }

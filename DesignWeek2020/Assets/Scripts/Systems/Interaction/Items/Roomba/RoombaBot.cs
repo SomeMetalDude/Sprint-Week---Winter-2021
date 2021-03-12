@@ -17,6 +17,7 @@ public class RoombaBot : DialogueNPC
                 EToolTip.SetActive(false);
                 showEToolTip = false;
             }
+            Destroy(this);
         }
     }
 

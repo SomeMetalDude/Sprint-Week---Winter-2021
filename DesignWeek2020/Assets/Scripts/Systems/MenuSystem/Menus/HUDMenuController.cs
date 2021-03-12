@@ -11,6 +11,10 @@ public class HUDMenuController : Menu
     public GameObject catfact2;
     public GameObject catfact3;
 
+    public GameObject thankYouText;
+
+    public List<GameObject> cats;
+
     private void Update()
     {
         //int minutes = (int)GameManager.Instance.secondsLeft / 60;
@@ -32,6 +36,11 @@ public class HUDMenuController : Menu
         else if (!catfact3.activeSelf)
         {
             catfact3.SetActive(true);
+            foreach (var cat in cats)
+            {
+                cat.SetActive(true);
+            }
+            thankYouText.SetActive(true);
         }
     }
 }

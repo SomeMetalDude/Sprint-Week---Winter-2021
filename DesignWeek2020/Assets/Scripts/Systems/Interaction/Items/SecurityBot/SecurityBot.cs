@@ -28,6 +28,7 @@ public class SecurityBot : DialogueNPC
                 EToolTip.SetActive(false);
                 showEToolTip = false;
             }
+            Destroy(this);
         }
     }
 

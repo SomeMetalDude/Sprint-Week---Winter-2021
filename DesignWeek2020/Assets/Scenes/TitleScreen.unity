@@ -179,9 +179,9 @@ MonoBehaviour:
       m_Calls: []
   HUDMenuClassifier: {fileID: 11400000, guid: 5028c1062269d1b41894f58df3eeb41c, type: 2}
   gameSceneReference:
-    sceneAsset: {fileID: 102900000, guid: 705230cf4b61b46c0bc5acb73f6d9721, type: 3}
-    scenePath: Assets/Scenes/prototypeLevel.unity
-    sceneName: prototypeLevel
+    sceneAsset: {fileID: 102900000, guid: a3baa5ef954c2466cba374d59fd323a0, type: 3}
+    scenePath: Assets/Scenes/finalLevel.unity
+    sceneName: finalLevel
   titleScreenReference:
     sceneAsset: {fileID: 102900000, guid: f30a77c69083a624fa13012cb4ff17f5, type: 3}
     scenePath: Assets/Scenes/TitleScreen.unity

@@ -21,6 +21,7 @@ public class LightBulbRobot : DialogueNPC
                 EToolTip.SetActive(false);
                 showEToolTip = false;
             }
+            Destroy(this);
         }
     }
 
