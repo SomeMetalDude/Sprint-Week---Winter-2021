@@ -15,7 +15,7 @@ public class NavAgentWaypointPath : MonoBehaviour
 
 	[SerializeField] float waitTime = 5f;
 	float timePassed;
-	[SerializeField] bool isBroken;
+	public bool isBroken;
 
 	void Awake()
 	{

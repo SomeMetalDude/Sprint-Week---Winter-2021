@@ -17,7 +17,10 @@ public class LightBulbRobot : DialogueNPC
         // If player triggered 
         if (other.GetComponent<PlayerInputs>())
         {
-            tooltipTextMesh.gameObject.SetActive(true); //Enable the dialogue
+            if (tooltipTextMesh)
+            {
+                tooltipTextMesh.gameObject.SetActive(true); //Enable the dialogue
+            }
 
             if (!conditionSatisfied)
             {

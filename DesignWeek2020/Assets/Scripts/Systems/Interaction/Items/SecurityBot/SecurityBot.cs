@@ -71,14 +71,18 @@ public class SecurityBot : DialogueNPC
                         rightArm.SetActive(true);
                     }
                 }
-            }
-            conditionSatisfied = head && arm1 && arm2;
-            if (conditionSatisfied)
-            {
-                individualParts.SetActive(false);
-                idleRobot.SetActive(true);
-                showEToolTip = true;
-                tooltipTextMesh.text = thankYouText;
+                conditionSatisfied = head && arm1 && arm2;
+                if (conditionSatisfied)
+                {
+                    individualParts.SetActive(false);
+                    idleRobot.SetActive(true);
+                    showEToolTip = true;
+                    if (EToolTip)
+                    {
+                        EToolTip.SetActive(true);
+                    }
+                    tooltipTextMesh.text = thankYouText;
+                }
             }
         }
     }

@@ -25,6 +25,8 @@ public abstract class InteractableObject : MonoBehaviour
             EToolTip.SetActive(false);
         }
         player = FindObjectOfType<PlayerInputs>();
+
+        InteractableObjectStart();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -95,6 +97,9 @@ public abstract class InteractableObject : MonoBehaviour
     {}
 
     public virtual void OnTriggerExited(Collider other)
+    {}
+
+    public virtual void InteractableObjectStart()
     {}
 
     public abstract void Interact();
