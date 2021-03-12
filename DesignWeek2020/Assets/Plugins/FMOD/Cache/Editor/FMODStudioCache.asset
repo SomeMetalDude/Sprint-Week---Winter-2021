@@ -1,6 +1,10 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+<<<<<<< HEAD
 --- !u!114 &-7407509733087737406
+=======
+--- !u!114 &-7941387477886290510
+>>>>>>> Development
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,19 +14,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/Footstep_Robot
   m_EditorClassIdentifier: 
   Path: event:/Footstep_Robot
   guid: 51feb5e103b48043afcc9674b3626b9b
+=======
+  m_Name: event:/Footstep_Player
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep_Player
+  guid: ce9915d6d95ed54cbe0340984468e822
+>>>>>>> Development
   Banks:
   - {fileID: -6427055198975889181}
   IsStream: 0
   Is3D: 1
+<<<<<<< HEAD
   IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+=======
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 81
+>>>>>>> Development
 --- !u!114 &-6663780136482087107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,11 +80,19 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
+<<<<<<< HEAD
   lastModified: 637510971563133978
   LoadResult: 0
   FileSizes: []
   Exists: 1
 --- !u!114 &-6417832473736186912
+=======
+  lastModified: 637510913704758325
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-6048873308625207301
+>>>>>>> Development
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,6 +102,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
   m_Name: event:/AmbientSoundAlt
   m_EditorClassIdentifier: 
   Path: event:/AmbientSoundAlt
@@ -89,15 +117,7 @@ MonoBehaviour:
   MaxDistance: 0
   Length: 50000
 --- !u!114 &-2108199588197986137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+=======
   m_Name: event:/Terminal Hum
   m_EditorClassIdentifier: 
   Path: event:/Terminal Hum
@@ -111,6 +131,41 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 3039
+--- !u!114 &-4836041245697649616
+>>>>>>> Development
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+<<<<<<< HEAD
+  m_Name: event:/Terminal Hum
+  m_EditorClassIdentifier: 
+  Path: event:/Terminal Hum
+  guid: 66e27ec70811e84c80afad9bca9a1d0d
+=======
+  m_Name: event:/Footstep_Robot
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep_Robot
+  guid: 51feb5e103b48043afcc9674b3626b9b
+>>>>>>> Development
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+<<<<<<< HEAD
+  Length: 3039
+=======
+  Length: 53
+>>>>>>> Development
 --- !u!114 &-1049464917174112748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +230,7 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -6663780136482087107}
   - {fileID: -1049464917174112748}
+<<<<<<< HEAD
   - {fileID: -7407509733087737406}
   - {fileID: -2108199588197986137}
   - {fileID: 134998064843352001}
@@ -182,12 +238,21 @@ MonoBehaviour:
   - {fileID: -591106385452476920}
   - {fileID: 6842178543034221989}
   - {fileID: 2364889205976826917}
+=======
+  - {fileID: -4836041245697649616}
+  - {fileID: -6048873308625207301}
+  - {fileID: -7941387477886290510}
+>>>>>>> Development
   EditorParameters: []
   MasterBanks:
   - {fileID: -6427055198975889181}
   StringsBanks:
   - {fileID: 2173327877136554407}
+<<<<<<< HEAD
   stringsBankWriteTime: 637510971563213758
+=======
+  stringsBankWriteTime: 637510891735891138
+>>>>>>> Development
   cacheVersion: 6
 --- !u!114 &134998064843352001
 MonoBehaviour:
@@ -227,11 +292,19 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
+<<<<<<< HEAD
   lastModified: 637510971563213758
   LoadResult: 0
   FileSizes:
   - Name: Desktop
     Value: 1118
+=======
+  lastModified: 637510891735891138
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 928
+>>>>>>> Development
   Exists: 1
 --- !u!114 &2364889205976826917
 MonoBehaviour:

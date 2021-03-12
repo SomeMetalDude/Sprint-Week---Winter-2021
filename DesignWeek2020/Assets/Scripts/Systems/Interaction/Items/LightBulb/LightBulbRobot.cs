@@ -7,6 +7,9 @@ public class LightBulbRobot : DialogueNPC
 
     public string thankYouText = "Thank you!";
 
+    public LaserGateTerminal terminal;
+    public float seconds;
+
     public override void Interact()
     {
         
@@ -31,6 +34,18 @@ public class LightBulbRobot : DialogueNPC
                     Destroy(player.itemHeld);
                     conditionSatisfied = true;
                     GetComponent<Animator>().SetBool("low", false);
+
+                    showEToolTip = true;
+                    if (EToolTip)
+                    {
+                        EToolTip.SetActive(true);
+                    }
+
+                    // If a terminal is referenced
+                    if (terminal)
+                    {
+                        terminal.DeferredSetEnabled(false, seconds);
+                    }
                 }
             }
         }

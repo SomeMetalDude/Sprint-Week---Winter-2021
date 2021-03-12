@@ -875,3 +875,5 @@ MonoBehaviour:
   fourthWall: {fileID: 454798068356941015}
   roomWalls: []
   roomsToHide: []
+  normalMaterial: {fileID: 2100000, guid: 8303b269d8ff34c238f3de8364d6985e, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 3600947cf679d274ab60556133878adc, type: 2}

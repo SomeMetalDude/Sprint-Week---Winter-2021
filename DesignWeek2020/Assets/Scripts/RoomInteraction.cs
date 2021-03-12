@@ -8,6 +8,8 @@ public class RoomInteraction : MonoBehaviour
     public List<GameObject> roomWalls;         //All of the walls that make up the room
     public List<RoomInteraction> roomsToHide;   //List of other rooms to hide
 
+    public Material normalMaterial;
+    public Material transparentMaterial;
 
     private void Start()
     {
@@ -21,7 +23,7 @@ public class RoomInteraction : MonoBehaviour
     {
         if (other.GetComponent<PlayerInputs>())
         {
-            fourthWall.GetComponent<MeshRenderer>().enabled = false;
+            fourthWall.GetComponent<MeshRenderer>().material = transparentMaterial;
             
             foreach (var room in roomsToHide)
             {
@@ -33,7 +35,7 @@ public class RoomInteraction : MonoBehaviour
     {
         if (other.GetComponent<PlayerInputs>())
         {
-            fourthWall.GetComponent<MeshRenderer>().enabled = true;
+            fourthWall.GetComponent<MeshRenderer>().material = normalMaterial;
 
             foreach (var room in roomsToHide)
             {
