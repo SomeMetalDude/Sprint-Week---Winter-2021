@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class DialogueNPC : InteractableObject
 {
-    
+    public bool conditionSatisfied;
 
 }

@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[Serializable]
 public class ToggleItemStateChangedEvent : UnityEvent<bool> { }
 
 public abstract class ToggleItem : InteractableObject

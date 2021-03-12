@@ -7,15 +7,26 @@ public abstract class InteractableObject : MonoBehaviour
     public bool isInteractable = false;
     public PlayerInputs player;
 
+    public bool showEToolTip = true;
+    public GameObject EToolTip;
 
     public string tooltipText = "Interact with me!";
-    public TextMesh tmObject;
+    public TextMesh tooltipTextMesh;
 
     private void Start()
     {
-        tmObject.text = tooltipText;
-        tmObject.gameObject.SetActive(false);
+        if (tooltipTextMesh)
+        {
+            tooltipTextMesh.text = tooltipText;
+            tooltipTextMesh.gameObject.SetActive(false);
+        }
+        if (EToolTip)
+        {
+            EToolTip.SetActive(false);
+        }
         player = FindObjectOfType<PlayerInputs>();
+
+        InteractableObjectStart();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -51,14 +62,28 @@ public abstract class InteractableObject : MonoBehaviour
     protected void EnableInteractions()
     {
         isInteractable = true;
-        tmObject.gameObject.SetActive(true);
+        if (tooltipTextMesh)
+        {
+            tooltipTextMesh.gameObject.SetActive(true);
+        }
+        if (EToolTip && showEToolTip)
+        {
+            EToolTip.SetActive(true);
+        }
         OnInteractionEnabled();
     }
 
     protected void DisableInteractions()
     {
         isInteractable = false;
-        tmObject.gameObject.SetActive(false);
+        if (tooltipTextMesh)
+        {
+            tooltipTextMesh.gameObject.SetActive(false);
+        }
+        if (EToolTip && showEToolTip)
+        {
+            EToolTip.SetActive(false);
+        }
         OnInteractionDisabled();
     }
 
@@ -72,6 +97,9 @@ public abstract class InteractableObject : MonoBehaviour
     {}
 
     public virtual void OnTriggerExited(Collider other)
+    {}
+
+    public virtual void InteractableObjectStart()
     {}
 
     public abstract void Interact();

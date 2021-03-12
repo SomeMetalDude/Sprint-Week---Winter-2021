@@ -10,7 +10,6 @@ public class Turret : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log($"{turretTerminal.name} - Terminal name");
         turretTerminal.toggleItemStateChangedEvent.AddListener(SetTurretEnabled);    
     }
 
