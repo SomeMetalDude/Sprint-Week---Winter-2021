@@ -8,6 +8,7 @@ public class LightBulbRobot : DialogueNPC
     public string thankYouText = "Thank you!";
 
     public LaserGateTerminal terminal;
+    public float seconds;
 
     public override void Interact()
     {
@@ -43,7 +44,7 @@ public class LightBulbRobot : DialogueNPC
                     // If a terminal is referenced
                     if (terminal)
                     {
-                        terminal.DeferredToggle(8);
+                        terminal.DeferredSetEnabled(false, seconds);
                     }
                 }
             }

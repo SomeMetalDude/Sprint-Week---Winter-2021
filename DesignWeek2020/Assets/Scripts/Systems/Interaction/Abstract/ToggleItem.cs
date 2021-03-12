@@ -13,9 +13,38 @@ public abstract class ToggleItem : InteractableObject
 
     public ToggleItemStateChangedEvent toggleItemStateChangedEvent = new ToggleItemStateChangedEvent(); //Every turret will have to listen to this
 
-    public void DeferredToggle(int seconds)
+    public void DeferredSetEnabled(bool enabled, float seconds)
     {
-        Invoke("Interact", seconds);
+        if (enabled)
+        {
+            Invoke("TurnOn", seconds);
+        }
+        else
+        {
+            Invoke("TurnOff", seconds);
+        }
+    }
+
+    public void TurnOn()
+    {
+        isOn = true;
+        Animator anim;
+        if (TryGetComponent(out anim))
+        {
+            anim.SetBool("on", isOn);
+        }
+        toggleItemStateChangedEvent.Invoke(isOn);
+    }
+
+    public void TurnOff()
+    {
+        isOn = false;
+        Animator anim;
+        if (TryGetComponent(out anim))
+        {
+            anim.SetBool("on", isOn);
+        }
+        toggleItemStateChangedEvent.Invoke(isOn);
     }
 
     public override void Interact()
