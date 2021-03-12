@@ -641,6 +641,7 @@ MonoBehaviour:
   tooltipTextMesh: {fileID: 700047577}
   conditionSatisfied: 0
   thankYouText: You brought me a bulb!
+  terminal: {fileID: 1180607050}
 --- !u!65 &130526814
 BoxCollider:
   m_ObjectHideFlags: 0
