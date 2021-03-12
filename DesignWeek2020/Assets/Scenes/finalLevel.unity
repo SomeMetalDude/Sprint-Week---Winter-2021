@@ -129,10 +129,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1766867090, guid: e0721d210592e43cf895f9dc7ff47169, type: 3}
-      propertyPath: waypoints.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766867090, guid: e0721d210592e43cf895f9dc7ff47169, type: 3}
       propertyPath: waypoints.Array.data[0]
       value: 
       objectReference: {fileID: 976439855}
@@ -207,36 +203,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: roomba
-      objectReference: {fileID: 0}
-    - target: {fileID: 307401704333333564, guid: e0721d210592e43cf895f9dc7ff47169,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3755504805195066250, guid: e0721d210592e43cf895f9dc7ff47169,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3755504805837486185, guid: e0721d210592e43cf895f9dc7ff47169,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3755504805946047212, guid: e0721d210592e43cf895f9dc7ff47169,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3755504806582268790, guid: e0721d210592e43cf895f9dc7ff47169,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3755504806954600288, guid: e0721d210592e43cf895f9dc7ff47169,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0721d210592e43cf895f9dc7ff47169, type: 3}
@@ -1210,6 +1176,8 @@ MonoBehaviour:
   tooltipTextMesh: {fileID: 528683019}
   conditionSatisfied: 0
   thankYouText: Thanks for your help!
+  terminal: {fileID: 0}
+  seconds: 0
 --- !u!65 &360598524
 BoxCollider:
   m_ObjectHideFlags: 0
