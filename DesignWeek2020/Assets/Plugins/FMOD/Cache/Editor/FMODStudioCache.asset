@@ -1,5 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7407509733087737406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footstep_Robot
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep_Robot
+  guid: 51feb5e103b48043afcc9674b3626b9b
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6663780136482087107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,10 +61,56 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637510634631295855
+  lastModified: 637510971563133978
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-6417832473736186912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/AmbientSoundAlt
+  m_EditorClassIdentifier: 
+  Path: event:/AmbientSoundAlt
+  guid: e5ea08305a0d5749a466563bf56e0b8e
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 50000
+--- !u!114 &-2108199588197986137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Terminal Hum
+  m_EditorClassIdentifier: 
+  Path: event:/Terminal Hum
+  guid: 66e27ec70811e84c80afad9bca9a1d0d
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3039
 --- !u!114 &-1049464917174112748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,11 +129,34 @@ MonoBehaviour:
   - {fileID: -6427055198975889181}
   IsStream: 0
   Is3D: 1
-  IsOneShot: 1
+  IsOneShot: 0
   Parameters: []
   MinDistance: 1
-  MaxDistance: 20
+  MaxDistance: 9.8
   Length: 4000
+--- !u!114 &-591106385452476920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footstep_Player_2D
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep_Player_2D
+  guid: 4693c5dc405daa419555145421200343
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 70
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,13 +175,43 @@ MonoBehaviour:
   EditorEvents:
   - {fileID: -6663780136482087107}
   - {fileID: -1049464917174112748}
+  - {fileID: -7407509733087737406}
+  - {fileID: -2108199588197986137}
+  - {fileID: 134998064843352001}
+  - {fileID: -6417832473736186912}
+  - {fileID: -591106385452476920}
+  - {fileID: 6842178543034221989}
+  - {fileID: 2364889205976826917}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6427055198975889181}
   StringsBanks:
   - {fileID: 2173327877136554407}
-  stringsBankWriteTime: 637510634631365440
+  stringsBankWriteTime: 637510971563213758
   cacheVersion: 6
+--- !u!114 &134998064843352001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Footstep_Player
+  m_EditorClassIdentifier: 
+  Path: event:/Footstep_Player
+  guid: ce9915d6d95ed54cbe0340984468e822
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 81
 --- !u!114 &2173327877136554407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,9 +227,55 @@ MonoBehaviour:
   Path: ../FMOD-BreakTheCycle/BreakTheCycle/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637510634631365440
+  lastModified: 637510971563213758
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 792
+    Value: 1118
   Exists: 1
+--- !u!114 &2364889205976826917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Robot Talk Broken
+  m_EditorClassIdentifier: 
+  Path: event:/Robot Talk Broken
+  guid: 7e091b3e5111a34ab84c0a7540982424
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 15
+  Length: 4000
+--- !u!114 &6842178543034221989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Robot Talk 2
+  m_EditorClassIdentifier: 
+  Path: event:/Robot Talk 2
+  guid: 30613c48d64c084e914bc557d2d6c1f8
+  Banks:
+  - {fileID: -6427055198975889181}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 9.400001
+  Length: 4000

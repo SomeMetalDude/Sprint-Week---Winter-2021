@@ -636,6 +636,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 1
+  EToolTip: {fileID: 0}
   tooltipText: Sure could use a lightbulb...
   tooltipTextMesh: {fileID: 0}
   conditionSatisfied: 0
@@ -998,6 +1000,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 1
+  EToolTip: {fileID: 0}
   tooltipText: Terminal
   tooltipTextMesh: {fileID: 0}
   isOn: 1
@@ -1553,6 +1557,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 1
+  EToolTip: {fileID: 0}
   tooltipText: Lightbulb
   tooltipTextMesh: {fileID: 0}
   isPickedUp: 0
@@ -1587,6 +1593,34 @@ Transform:
   m_Father: {fileID: 1209782650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &515128151 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4555144252668749758, guid: 2175a9c5143813f4998d76576e36e08b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1242370464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &515128154
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515128151}
+  m_Enabled: 1
+--- !u!114 &515128156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515128151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attenuationObject: {fileID: 0}
+  ListenerNumber: -1
 --- !u!1 &551653574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,6 +1932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: roomba
+      objectReference: {fileID: 0}
+    - target: {fileID: 307401704333333564, guid: e0721d210592e43cf895f9dc7ff47169,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0721d210592e43cf895f9dc7ff47169, type: 3}
@@ -2743,6 +2782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isInteractable: 0
   player: {fileID: 0}
+  showEToolTip: 1
+  EToolTip: {fileID: 0}
   tooltipText: Lightbulb2
   tooltipTextMesh: {fileID: 0}
   isPickedUp: 0
@@ -3232,7 +3273,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player & Interactions
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4555144252668749757, guid: 2175a9c5143813f4998d76576e36e08b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2175a9c5143813f4998d76576e36e08b, type: 3}
 --- !u!1 &1262378648
 GameObject:
@@ -3800,6 +3842,27 @@ Transform:
   m_Father: {fileID: 1602867366}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1600445261 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4555144251593070304, guid: 2175a9c5143813f4998d76576e36e08b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1242370464}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1600445267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600445261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ece03e58edd7bc43ba6392dd89bd1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputSound: event:/Footstep_Player
+  playerIsMoving: 0
+  walkingSoundSpeed: 0.5
 --- !u!1 &1602867365
 GameObject:
   m_ObjectHideFlags: 0

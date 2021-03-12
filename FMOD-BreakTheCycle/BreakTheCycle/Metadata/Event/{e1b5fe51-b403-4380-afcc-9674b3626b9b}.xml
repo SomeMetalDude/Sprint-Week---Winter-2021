@@ -82,6 +82,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{4be1b1f9-9d74-47ab-91e4-f0c8d6c9fae0}" />
 	<object class="EventMixerGroup" id="{da8689e3-95c6-4c02-bfea-f1709203d482}">
+		<property name="color">
+			<value>Blue</value>
+		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
