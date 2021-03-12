@@ -7,6 +7,15 @@ public class MainMenuController : Menu
     //Example classifier
     public MenuClassifier HUDMenuClassifier;
     public SceneReference gameSceneReference;
+    public SceneReference titleScreenReference;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            ShowGameScene();
+        }
+    }
 
     //Example use
     public void ShowGameScene()
@@ -15,8 +24,8 @@ public class MainMenuController : Menu
         MenuManager.Instance.ShowMenu(HUDMenuClassifier); // Show HUD
 
         //ENABLE PLAYER INPUT
-
         SceneLoader.Instance.LoadScene(gameSceneReference);
+        SceneLoader.Instance.UnloadScene(titleScreenReference);
 
         GameManager.Instance.SetGamePaused(false);
     }

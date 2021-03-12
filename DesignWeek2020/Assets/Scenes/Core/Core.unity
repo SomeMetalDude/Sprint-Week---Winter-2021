@@ -293,9 +293,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnableMultiTouch: 0
   StartUpScene:
-    sceneAsset: {fileID: 102900000, guid: 5a124d8011bcd514990faf70a1646ecb, type: 3}
-    scenePath: Assets/Scenes/Core/UI.unity
-    sceneName: UI
+    sceneAsset: {fileID: 102900000, guid: f30a77c69083a624fa13012cb4ff17f5, type: 3}
+    scenePath: Assets/Scenes/TitleScreen.unity
+    sceneName: TitleScreen
 --- !u!1 &1249601232
 GameObject:
   m_ObjectHideFlags: 0

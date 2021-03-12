@@ -8,7 +8,7 @@ public class PauseMenuController : Menu
     public MenuClassifier mainMenuClassifier;
 
     public SceneReference gameSceneReference;
-
+    public SceneReference titleScreen;
 
     public void ResumeGame()
     {
@@ -21,9 +21,12 @@ public class PauseMenuController : Menu
 
     public void QuitGame()
     {
-        MenuManager.Instance.HideMenu(menuClassifier); // Hide self
-        MenuManager.Instance.ShowMenu(mainMenuClassifier); // Show Main
+        //MenuManager.Instance.HideMenu(menuClassifier); // Hide self
+        //MenuManager.Instance.ShowMenu(mainMenuClassifier); // Show Main
 
-        SceneLoader.Instance.UnloadScene(gameSceneReference);
+        //SceneLoader.Instance.LoadScene(titleScreen);
+        //SceneLoader.Instance.UnloadScene(gameSceneReference);
+
+        Application.Quit();
     }
 }
